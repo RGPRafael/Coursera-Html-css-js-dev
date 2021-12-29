@@ -1,39 +1,156 @@
+<!--Navbar: Create a navbar that scrolls 
+  away together with the page (the navbar should become invisible 
+  and is not fixed to the top when you scroll the page down). 
+  The navbar should have a company name (i.e., navbar-brand class) 
+  called "Food, LLC" that is aligned to the left side of the navbar. 
+  (See https://getbootstrap.com/docs/3.3/components/#navbar. 
+  Make the browser window narrower to see the mobile menu button 
+  appear in the first example shown at the provided link.) -->
+
 
 
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="utf-8">
-<link rel="stylesheet" href="css/styles.css">
-<meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Responsive Layout</title>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Responsive Layout</title>
 
 </head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    <title>Bootstrap Starter Page</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/styles.css">
-  </head>
+<title>Bootstrap Starter Page</title>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+
 <body>
 
-  <h1>Hello Coursera!</h1>
+  <header>
+    <!-- do i put hidden-xs here ? -->
+    <nav id="header-nav" class="navbar navbar-default navbar-static-top">
+      <div class="container-fluid">
+        <!--<div id="logo-img"></div> -->
+        <div class="navbar-header">
+          <a href="index.html" class="visible-md visible-lg"> </a>
 
-  <!-- jQuery (Bootstrap JS plugins depend on it) -->
-  <script src="js/jquery-1.11.3.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/script.js"></script>
+          <div class="navbar-brand">
+            <a href="index.html">
+              <h1>Food, LLC</h1>
+            </a>
+            <p> <span>The Restaurant at the End of the Universe </span></p>
+          </div>
+
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav"
+            aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div> <!-- end to class navbar header-->
+
+        <div id="collapsable-nav" class="collapse navbar-collapse">
+          <ul id="nav-list" class="nav navbar-nav navbar-right">
+            <li>
+              <a href="menu-categories.html">
+                <br class="hidden-xs"> Chicken</a>
+            </li>
+            <li>
+              <a href="#">
+                <br class="hidden-xs"> Beef</a>
+            </li>
+            <li>
+              <a href="#">
+                <br class="hidden-xs"> Sushi</a>
+            </li>
+          </ul><!-- #nav-list -->
+        </div><!-- .collapse .navbar-collapse -->
+      </div><!-- .container -->
+    </nav>
+  </header>
+
+    <div id="Menu" class="container-fluid">
+      <p id="menu_tile" class = "text-center" > Our Menu </p>
+      <div class="row">
+        <div class="col-md-4 col-sm-6 col-xs-12 ">
+          <h3 class="title_choice text-center"> Chicken</h3>
+          <p>The Hitch Hiker's Guide to the Galaxy is, as has been remarked
+            before often and accurately, a pretty startling kind of a thing.
+            It is, essentially, as the title implies, a guide book. The
+            problem is, or rather one of the problems, for there are many, a
+            sizeable portion of which are continually clogging up the civil,
+            commercial and criminal courts in all areas of the Galaxy, and
+            especially, where possible, the more corrupt ones, this.
+            The previous sentence makes sense. That is not the problem.
+            This is: Change.</p>
+        </div> <!-- end of chicken-->
+
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <h3 class="title_choice text-center"> Beef </h3>
+          <p>Humans are bipedal ape descendants from the planet Earth.
+            Not noted for being particularly bright, up until they are destroyed,
+            if they even manage to do that much correctly, they actually still think
+            that digital watches are a pretty neat idea, and they spend most of their time concerning
+            themselves with moving about little green pieces of paper. On the bright side,
+            they are rather adept at adapting to just about any situation that the universe tosses at them.
+            For a short time the last two humans left in the universe, following Earth's
+            destruction by the Vogons, were Trillian, who had left the Earth some time before
+            its destruction with Zaphod Beeblebrox, and Arthur Dent, who escaped the Earth's
+            demolition with a man whom he thought to be human, but wasn't.
+
+            The number went up to three for a while, as they had a daughter called Random Dent.
+            Unfortunately, they were all killed in the events of Mostly Harmless. .</p>
+        </div> <!-- end of beef-->
+        
+        <div class="col-md-4 col-sm-12 col-xs-12">
+          <h3 class="title_choice text-center"> Sushi </h3>
+          <p>The Hitchhiker's Guide to the Galaxy's definition of "Universe":
+            The Universe is a very big thing that contains a great number of planets and a
+            great number of beings. It is Everything. What we live in. All around us.
+            The lot. Not nothing. It is quite difficult to actually define what the Universe means,
+            but fortunately the Guide doesn't worry about that and just gives us some useful information to live in it.
+
+            Area: The area of the Universe is infinite.
+
+            Imports: None. This is a by product of infinity; it is
+            impossible to import things into something that has infinite
+            volume because by definition there is no outside to import things from.
+
+            Exports: None, for similar reasons as imports.
+
+            Population: None. Although you might see people from time to time,
+            they are most likely products of your imagination. Simple mathematics tells us
+            that the population of the Universe must be zero. Why? Well given that the volume of
+            the universe is infinite there must be an infinite number of worlds. But not all of them are populated;
+            therefore only a finite number are. Any finite number divided by infinity is zero, therefore the average
+            population of the Universe is zero, and so the total population must be zero.
+
+            Art: None. Because the function of art is to hold a mirror up to nature there can be no art
+            because the Universe is infinite which means there simply isn't a mirror big enough.
+
+            Sex: None. Although in fact there is quite a lot, given the zero population of the Universe
+            there can in fact be no beings to have sex, and therefore no sex happens in the Universe </p>
+        </div> <!--end of sushi-->
+      
+      </div> <!--end of menu -->
+      <!-- jQuery (Bootstrap JS plugins depend on it) -->
+      <script src="js/jquery-1.11.3.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <script src="js/script.js"></script>
 
 </body>
-</html>
 
+</html>
